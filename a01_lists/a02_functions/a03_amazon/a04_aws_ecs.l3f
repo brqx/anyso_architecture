@@ -1,0 +1,42 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2022"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="amazon"
+CONCEPT_SUBDIV_04="general"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+# Funcionalidad ECS
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ecs/a31_list_clusters.f
+#-------------------------------------------------------------------
+
+# Funcionalidad ECR Tag
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ecs/a32_list_tasks.f
+#-------------------------------------------------------------------
+
+# Funcionalidad ECS Fargate IP
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ecs/a33_describe_task.f
+#-------------------------------------------------------------------
+

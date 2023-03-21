@@ -1,0 +1,33 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="July 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="system"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Tercer nivel: Funcionalidad Change Owner and Perms
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/mkdi/mkp.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/mkdi/mkc_mkp_and_chow.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/mkdi/mkd_mkc_and_cd.f 
+#-------------------------------------------------------------------
+

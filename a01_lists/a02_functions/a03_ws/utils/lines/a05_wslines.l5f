@@ -1,0 +1,115 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2015
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2015"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Auxi Params Level 01
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_01/ws_getbkparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_01/ws_getdomainparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_01/ws_getsvparamsline.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_01/ws_ckstorageline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_01/ws_ckdomainsline.f
+#-------------------------------------------------------------------
+
+#-- Auxi Params Level 02
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_02/ws_getcommonparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_02/ws_setdomparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_02/ws_setsubparamsline.f
+#-------------------------------------------------------------------
+
+#-- Auxi Params Level 03
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_03/ws_getparamsmain.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_03/ws_getparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_03/ws_ckparamsline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/auxi/level_03/ws_ckparamsmain.f
+#-------------------------------------------------------------------
+
+#-- Chek Params Level 01
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_01/ws_ckidsite_dotformat.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_01/ws_ckidsite_dashformat.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_01/ws_ckidsubsite_dotformat.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_01/ws_ckidsubsite_dashformat.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_01/ws_ckidsubsite_mainline.f
+#-------------------------------------------------------------------
+
+
+#-- Chek Params Level 02
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_02/ws_ckidsite.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_02/ws_ckidsiteout.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/chek/level_02/ws_ckidsubsite.f
+#-------------------------------------------------------------------
+
+
+#-- Lines
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_01/ws_getline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_01/ws_mainline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_01/ws_printline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_01/ws_subdline.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_02/ws_getdomainline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_02/ws_getsubdomainline.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_03/ws_gdcreate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_03/ws_gscreate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_03/ws_gddrop.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wslines/line/level_03/ws_gsdrop.f
+#-------------------------------------------------------------------
+

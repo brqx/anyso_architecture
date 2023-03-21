@@ -1,0 +1,52 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- awv - awv8
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#-- aws-vault
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+#-Aws Secure Connect Engine - Aws Vault
+
+#Amazon Vault Conexion 1h
+
+alias awva="aws-vault "
+
+#Aws vault list
+
+alias awval="awva list"
+
+#Amazon Vault Conexion 1h
+
+alias awv="awva exec "
+
+# Este tiene que ser una funcion
+alias awvd="aws_vault_duration"
+
+# Funcionalidad Conexion 3h
+
+alias awv3="awvd 3h "
+
+# Funcionalidad DexConexion - Debe ser una funcion
+
+alias awvu="aws_vault_unset"
+

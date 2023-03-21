@@ -1,0 +1,65 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- k - kcr - kdl
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Kubernetes
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T eks aks eksctl
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- Ko alias ------------------
+
+alias aks="aws eks  "
+
+alias aksl="aks list-clusters  "
+
+#---------------- Kops alias ------------------
+
+#Acualizar kube config con la configuracion de aws
+alias aku="aks update-kubeconfig --name "
+
+#Generar un token para operar contra el cluser eks
+alias aktok="aks get-token --cluster-name " 
+
+
+#========== EKSCTL ==========
+
+alias eks="eksctl "
+
+alias eksu="eks utils "
+
+alias eksgc="eks get clusters "
+
+# Escribir la confgiguracion del cluster
+# /home/ric/.kube/config
+alias ekswconfig="eksu write-kubeconfig --cluster "
+
+#---------- A P P L Y ------------
+
+# Crear cluster basado en manifest
+alias eksf="eks create cluster -f "
+
+# Apply file is create cluster
+alias eksa="eksf"
+
+# Eliminar cluster - Probarlo
+alias eksd="eks delete cluster -f"

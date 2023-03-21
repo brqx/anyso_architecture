@@ -1,0 +1,48 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2015
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2015"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="zpresent"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#- Pretty Lines - No separator functions - ficticious - 
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/nosep/pretty_get_line.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/nosep/pretty_set_line.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/nosep/pretty_out_line.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/nosep/pretty_set_filled.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/nosep/pretty_out_filled.f
+#-------------------------------------------------------------------
+
+#- Pretty Lines - Separator functions 
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/separ/pretty_gep_line.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/separ/pretty_sep_line.f
+#-------------------------------------------------------------------
+
+#- Pretty Lines - Auxiliar functions
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lines/auxi/pretty_line_set_args_len.f
+#-------------------------------------------------------------------
+

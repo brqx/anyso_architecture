@@ -1,0 +1,27 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Mayo 2020"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="alias"
+CONCEPT_ARQUETIPO_04="tf"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO
+#-==================================================================
+
+
+# Funcionalidad Terraform - Tf
+
+
+#-------------------------------------------------------------------
+. ${LAA_ALIA}a03_tf/a04_tf.l3a
+#-------------------------------------------------------------------

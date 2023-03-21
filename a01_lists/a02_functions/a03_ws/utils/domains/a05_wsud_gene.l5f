@@ -1,0 +1,68 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Julio 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+#- Domains - Generate (Level I)
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/full/wsfdg_full_domain_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/full/wsldg_local_domain_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/full/wsxdg_local_domain_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/full/wsodg_one_domain_generate.f
+#-------------------------------------------------------------------
+
+
+#- Project - Generate (Level I)
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/full/wspdg_project_domains_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/loca/wspg_a01_data_project_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/loca/wspg_b02_projects_generate.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/loca/wspg_c03_servers_generate.f
+#-------------------------------------------------------------------
+
+
+#- Domains - Generate (level II )
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/loca/wsdg_domain_generate.f
+#-------------------------------------------------------------------
+
+#- Project - Generate (level II )
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/loca/wspg_a00_data_project_prepare.f
+#-------------------------------------------------------------------
+
+
+#- Domains - Generate (Auxiliar )
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/auxi/wsgl_generate_lang_structure.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/auxi/wsgs_generate_subdomains_structure.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/domains/gene/auxi/wsdg_create_file_structures.f
+#-------------------------------------------------------------------
+

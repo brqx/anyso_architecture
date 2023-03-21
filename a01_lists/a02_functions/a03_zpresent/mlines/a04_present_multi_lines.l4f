@@ -1,0 +1,67 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Julio 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="zpresent"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#- Generate Pretty multi lines - Level 00 	(none header line )
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_00/multi_line_basic.f
+#-------------------------------------------------------------------
+
+#- Pretty multi lines - Level 01 			(one header line )
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/multi_line_header.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/multi_line_normal.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/underline_normal.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/underline_dash.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/underline_hyphen_dash.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/upperline_normal.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/upperline_dash.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_01/upperline_hyphen_dash.f
+#-------------------------------------------------------------------
+
+
+#- Pretty multi lines - Level 02 (two header lines )
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_02/multi_line_header_ck_empty.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_02/multi_line_command.f
+#-------------------------------------------------------------------
+
+. ${LSCRIPT_PARTICULAR_PATH_04}mlines/level_02/multi_line_normal_crc_alt.f
+#-------------------------------------------------------------------
+

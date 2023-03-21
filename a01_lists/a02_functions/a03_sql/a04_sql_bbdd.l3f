@@ -1,0 +1,46 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2017
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Febrero 2017"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="list"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="sql"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+#-- Segundo nivel: Funcionalidad
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/alter/a04_sql_bbdd_alter.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/copy/a04_sql_bbdd_copy.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/create/a04_sql_bbdd_create.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/drop/a04_sql_bbdd_drop.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/list/a04_sql_bbdd_list.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/clean/a04_sql_bbdd_clean.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/import/a04_sql_bbdd_import.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/move/a04_sql_bbdd_move.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/replace/a04_sql_bbdd_replace.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/sync/a04_sql_bbdd_sync.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_sql/bbdd/utils/a04_sql_bbdd_utils.l4f
+#-------------------------------------------------------------------
+

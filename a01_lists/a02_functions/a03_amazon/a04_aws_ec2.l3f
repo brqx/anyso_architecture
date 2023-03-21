@@ -1,0 +1,97 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2020"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="amazon"
+CONCEPT_SUBDIV_04="general"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+# Funcionalidad Connect Instance ( 18-11-2021)
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_connect_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Stop Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_stop_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List Instances
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List SG
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_sgs.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List RULES
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_rules_sg.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Start Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_start_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Create Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_create_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Delete/Terminate Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_delete_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List Bundles
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_bundles_ec2.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_bundles_slow_ec2.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List Amis (imagenes)
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_amis_ec2.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_amis_slow_ec2.f
+#-------------------------------------------------------------------
+
+
+# Funcionalidad List Ec2 Prices
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_prices_ec2.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}ec2/aws_list_prices_slow_ec2.f
+#-------------------------------------------------------------------
+

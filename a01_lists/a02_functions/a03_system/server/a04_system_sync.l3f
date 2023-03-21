@@ -1,0 +1,81 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2015
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2015"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="system"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Remote Auxiliar Functions
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/auxi/csd_check_server_data.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/auxi/gsd_get_server_data.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/auxi/sync_set_path.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/auxi/sync_set_target.f
+#-------------------------------------------------------------------
+
+#-- Local Sync
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_01/sxfr_sync_from_local_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_01/sxto_sync_to_local_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_01/szfr_sync_replace_from_local_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_01/szto_sync_replace_to_local_folder.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_02/satafromram_sync_sata_from_ram.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_02/satatoram_sync_sata_to_ram.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_02/ssdfromram_sync_ssd_from_ram.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/local/level_02/ssdtoram_sync_ssd_to_ram.f
+#-------------------------------------------------------------------
+
+#-- Remote Sync (pending to check)
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_01/srxfr_sync_from_remote_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_01/srxto_sync_to_remote_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_01/srzfr_sync_replace_from_remote_folder.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_01/srzto_sync_replace_to_remote_folder.f
+#-------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_02/dual_sync_documents_personal.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_02/onedir_sync_documents_personal.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/sync/remote/level_02/onedir_synz_delete_documents_personal.f
+#-------------------------------------------------------------------
+
+
+
+

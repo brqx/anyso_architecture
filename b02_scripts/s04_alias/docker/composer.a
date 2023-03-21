@@ -1,0 +1,72 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.5" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker composer - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-D O C K E R   C O M P O S E
+
+#---------------- dc alias ------------------
+
+alias dc="docker-compose "
+
+#---------------- N F O ------------------
+
+#  dc up --> Arrancar estructura no detach
+alias dcun="dc up "
+
+#  dc build --> Arrancar estructura no detach
+alias dcb="dc build --no-cache "
+
+
+#  dc up --> Arrancar estructura no detach sin cache y forzando la recreación
+alias dcuf="dcun --force-recreate"
+
+#  dc up --> Arrancar estructura no detach sin cache y forzando la recreación
+alias dcu="dcb && dcuf "
+
+#  dc up --> Arrancar estructura detach/uniendose al container
+alias dcud="dcb && dcuf -d "
+
+alias dcuv="dc --verbose  up "
+
+# dcur --> Inicia borrando los contenedores huerfanos
+alias dcur='dcu --remove-orphans'
+
+#  dc stop --> Detiene estructura
+alias dcs="dc stop "
+
+# Down - Destroy structure
+# To stop and remove containers, networks and images created
+alias dcd="dc down "
+
+alias dcdv="dc down --volumes"
+
+#  dc port --> Muestra los puertos usados
+alias dcp="dc port "
+
+# Docker Compose Information - 2022 Jul
+alias dcz="dc_alias_info_short"
+
+alias dczz="dc_alias_info_large"

@@ -1,0 +1,55 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2020"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="docker"
+CONCEPT_SUBDIV_04="info"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+
+# Funcionalidad Docker - Info
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}d10_docker_alias_info.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Info Short
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}d31_d_alias_info_short.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Compose - Info Large
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}d32_d_alias_info_large.f
+#-------------------------------------------------------------------
+
+
+# Funcionalidad Docker - Compose - Info
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}d11_dc_alias_info_short.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Compose - Info Large
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}d22_dc_alias_info_large.f
+#-------------------------------------------------------------------

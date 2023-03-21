@@ -1,0 +1,77 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2020"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="amazon"
+CONCEPT_SUBDIV_04="general"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+# Funcionalidad List Bundles Instances
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_list_bundles_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Stop Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_stop_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad List Instances
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_list_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Start Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_start_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Create Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_create_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Delete Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_delete_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad GetIp Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_getip_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Ssh Instance
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_ssh_lightsail.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Kubernetes - K8s Lightsail
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}lightsail/aws_create_k8s_lightsail.f
+#-------------------------------------------------------------------
+

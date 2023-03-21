@@ -1,0 +1,83 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2020"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="docker"
+CONCEPT_SUBDIV_04="commands"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+# Funcionalidad List VPCs
+
+#-------------------------------------------------------------------
+#. ${LSCRIPT_PARTICULAR_PATH_04}docker_list_ps.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Eliminacion de contenedores None
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}containers/dk_drmnone.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Listado - Filtrado de imágenes
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}images/dk_di_images.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Images - Tags
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}images/dk_dt_tag_images.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Images - Tags
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}images/dk_dbt_build_tag.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Procesos - Filtrado de procesos
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}process/dk_dps_dpa.f
+#-------------------------------------------------------------------
+
+# Filtrado inverso - Para evitar los kubernetes
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}process/dk_dps_sin.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Procesos - Ejecuccion de bash
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}containers/dk_exec_bash.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Redes - Create
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}networks/dk_network_create.f
+#-------------------------------------------------------------------
+
+# Funcionalidad Docker - Redes - Fast Inspect
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}networks/dk_network_fast_inspect.f
+#-------------------------------------------------------------------
+

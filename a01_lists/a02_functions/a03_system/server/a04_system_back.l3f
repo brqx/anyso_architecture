@@ -1,0 +1,87 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="system"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+#-- Auxiliar functions
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/auxi/get_backup_server_data.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/auxi/get_backup_personal_server_data.f
+#-------------------------------------------------------------------
+
+
+#-- Level 01 - Local Funcs
+
+#-- Local Specific Functions (x - backup normal [append] | z - backup z [update delete] )
+
+#-Ideal to store snapshop current settings
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_01/bkx_backup_local_path.f
+#-------------------------------------------------------------------
+
+#-Ideal to sync current settings (live backups)
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_01/bkz_backup_livez_path.f
+#-------------------------------------------------------------------
+
+
+#-- Level 02 - Local Funcs
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_02/bkxfs_backup_local_file_system.f
+#-------------------------------------------------------------------
+##. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_02/bkxdb_backup_local_database.f
+#-------------------------------------------------------------------
+##. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_02/bkxch_backup_local_cache.f
+#-------------------------------------------------------------------
+
+#-- Level 03 - Funcs
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/local/level_03/bkdxfs_backup_direct.f
+#-------------------------------------------------------------------
+
+#-- Level 04 - Funcs
+
+#-------------------------------------------------------------------
+##./level_04/bkxst_backup_local_site.f
+#-------------------------------------------------------------------
+
+
+#-- Level 01 - Remote Funcs  (Personal and Sites )
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/remote/level_01/bkrx_backup_remote_path.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/remote/level_01/bkrz_backup_remotez_path.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/remote/level_01/bprx_backup_personal_remote_path.f
+#-------------------------------------------------------------------
+
+
+#-- Level 02 - Remote Funcs
+
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}server/back/spec/remote/level_02/back_documents_personal.f
+#-------------------------------------------------------------------
+
+

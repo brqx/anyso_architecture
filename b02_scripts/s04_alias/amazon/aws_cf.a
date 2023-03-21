@@ -1,0 +1,43 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- awf
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#Amazon Cloud Formation
+
+alias awcf="aws cloudformation "
+
+# Funcionalidad Create Stack Cloud Formation
+
+alias awcfc="aws_create_cf"
+
+# Funcionalidad Delete Stack Cloud Formation
+
+alias awcfd="aws_delete_cf"
+
+# Funcionalidad List Stack Cloud Formation
+
+alias awcfl="aws_list_cf"

@@ -1,0 +1,53 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.6" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T docker volumes
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+# V O L U M E S
+
+#  docker volumes  -->Enlace Host - Container
+alias dv="d volume "
+
+# dv create --> Create new volume
+alias dvc="dv create "
+
+# dv list --> List Volumes
+alias dvl="dv list "
+
+# dv inspect --> Detailed information for volumes
+alias dvi="dv inspect "
+
+# dv rm --> Remove volume
+alias drmv="dv rm "
+
+# dv rm --> Remove volume
+alias dvrm="drmv "
+
+# dv prune --> Remove all unused volumes
+alias dvpr="dmrv "
+
+alias drn="drm_containers_and_images_none"
+alias dri="drm_images_none"

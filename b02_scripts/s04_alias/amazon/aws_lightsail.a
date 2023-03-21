@@ -1,0 +1,64 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- aw - awc
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#LigthtSail
+
+alias awssh="aws_ssh"
+
+alias awl="aws lightsail "
+
+#-Get Key pairs
+alias awlk="awl get-key-pairs --output text | tr '\t' ' ' | cut -d ' '  -f5"
+
+alias awll="aws_list_lightsail"
+
+#-Get Blue Prints (ubuntu, drupal ...)
+alias awlblue="awl get-blueprints --output text | tr '\t' ' ' | cut -d ' ' -f 2"
+
+# Get Bundles (nano ... cpu ... disk .... price  ... memory)
+alias awlbund="aws_list_bundles_lightsail_tab "
+
+#Get IP of instance
+alias awli="aws_getip_lightsail "
+
+alias awlc="aws_create_lightsail "
+
+alias awlp="aws_stop_lightsail "
+
+alias awls="aws_start_lightsail "
+
+#Delete and delete force
+alias awld="aws_delete_lightsail "
+
+alias awldd="aws_deleteforce_lightsail "
+
+alias awlddw="aws_deleteforce_and_wait_lightsail "
+
+alias awlr="awl restart-instance "
+
+alias awlg="awl get-instances "
+
+alias awlk8="aws_create_k8s_lightsail "

@@ -1,0 +1,57 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2017
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2017"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Level 00: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/subdomain/wscs_create_subdomain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/subdomain/wsds_drop_subdomain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/subdomain/wccs_create_cluster_subdomain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/subdomain/wcds_drop_cluster_subdomain.f
+
+
+#-- Level 01: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/subdomain/wscsl_create_subdomain_lang.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/subdomain/wscsn_create_subdomain_nocluster.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/subdomain/wsdsl_drop_subdomain_lang.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/subdomain/wsdsn_drop_subdomain_nocluster.f
+
+#-- Level 02: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/subdomain/ws_create_subdomain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/subdomain/ws_drop_subdomain.f
+
+#-- Level 03: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/subdomain/webserver_create_subdomain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/subdomain/webserver_drop_subdomain.f
+
+#-- Level 04: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/apache_crvss.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/gwan_crvss.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/gwan_drvss.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/lighttp_crvss.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/nginx_crsub.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/subdomain/nginx_crsub_ssl.f
+

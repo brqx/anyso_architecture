@@ -1,0 +1,39 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- awdy - awdyl - awdys
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws ECR
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+# awdy  --> DynamoDb
+
+#Amazon ECS - awc
+alias awdy="aws dynamodb "
+
+#Aws DynamoDb List Tables
+alias awdyl="aws_dynamodb_list_tables"
+
+#Aws DynamodB Scan Table
+alias awdys="aws_dynamodb_scan_table"
+

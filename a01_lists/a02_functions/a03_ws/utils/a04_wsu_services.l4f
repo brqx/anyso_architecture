@@ -1,0 +1,63 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2017
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.3"          #  Version del Script actual
+FECHA_SCRIPT="July 2017"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+#- Services - Gwan - Nginx - Lighttp - Http - Apache
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/webserver/ws_restart.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/webserver/ws_start.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/webserver/ws_stop.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/webserver/ws_reload.f
+#-------------------------------------------------------------------
+
+#- Engines - Php52 - Php56 - Php71 - hiphop
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/engines/ng_restart.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/engines/ng_start.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/engines/ng_stop.f
+#-------------------------------------------------------------------
+
+#- Reverse Proxy - HaProxy
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/haproxy/ha_start.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/haproxy/ha_stop.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/haproxy/ha_restart.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/haproxy/ha_reload.f
+#-------------------------------------------------------------------
+
+#- Full Product - Clearing Management Philosofy
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/full/fus_full_products_start.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/full/fur_full_products_restart.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/services/full/fup_full_products_stop.f
+#-------------------------------------------------------------------

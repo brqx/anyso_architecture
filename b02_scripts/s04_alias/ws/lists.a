@@ -1,0 +1,41 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.5" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+#+ Alias 
+#-------------------------------------------------------------------
+#-- lista_sites 
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#-- gq
+#-------------------------------------------------------------------
+#+ Informacion : 
+#-------------------------------------------------------------------
+#I Alias generales para reiniciar productos - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T sites list
+#-------------------------------------------------------------------
+#+ Parametros : 
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+#-Lista Sites
+alias lista_sites="gq AA | cut -d '=' -f2"
+
+#-Mata Nginx
+alias knginx='kill -9 $(p nginx | tr -s " " | cut -d " " -f2 | tr "\n" " ") && rm -f /var/run/nginx/nginx_server*.sock'
+
+#-Arrabca _Nginx
+alias snginx="/usr/sbin/nginx -c /etc/nginx/nginx.conf && chown apache:apache /var/run/nginx/nginx_server*.sock"
+
+#-Arranca H20
+
+alias sh2o="/usr/bin/h2o -m daemon -c /etc/h2o/h2o.conf && chow apache:apache /var/run/h2o"
+
+#-Mata H2o
+alias kh2o='kill -9 $(p h2o | tr -s " " | cut -d " " -f2 | tr "\n" " ") && rm -f /var/run/h2o/h2o*.sock'
+

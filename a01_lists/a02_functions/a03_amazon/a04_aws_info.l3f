@@ -1,0 +1,93 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2022"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="amazon"
+CONCEPT_SUBDIV_04="info"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+# Funcionalidades Aws - Main Information
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}main/a10_aws_alias_main_info.f
+#-------------------------------------------------------------------
+
+# Funcionalidades Aws - Specific Information
+# ==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+
+# Aws VPC
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a61_aws_alias_info_vpc.f
+#-------------------------------------------------------------------
+
+# Aws EC2
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a62_aws_alias_info_ec2.f
+#-------------------------------------------------------------------
+
+# Aws S3
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a63_aws_alias_info_s3.f
+#-------------------------------------------------------------------
+
+# Aws EFS
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a64_aws_alias_info_efs.f
+#-------------------------------------------------------------------
+
+# Aws ECR
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a71_aws_alias_info_ecr.f
+#-------------------------------------------------------------------
+
+# Aws ECS
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a72_aws_alias_info_ecs.f
+#-------------------------------------------------------------------
+
+# Aws DynamoDb
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a73_aws_alias_info_dynamodb.f
+#-------------------------------------------------------------------
+
+# Aws VAULT
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a65_aws_alias_info_vault.f
+#-------------------------------------------------------------------
+
+# Aws LightSail
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a66_aws_alias_info_lightsail.f
+#-------------------------------------------------------------------
+
+# Aws Cloud Formation
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}funcs/a67_aws_alias_info_cf.f
+#-------------------------------------------------------------------
+

@@ -1,0 +1,46 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- k - kcr - kdl
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Kubernetes - Minikube
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- Minikube alias ------------------
+
+alias mink="minikube "
+
+alias minks="mink status "
+
+alias minkc="mink config "
+
+alias minkx="mink start "
+
+alias minkt="mink stop "
+
+alias minkp="mink pause "
+
+alias minku="mink unpause "
+
+alias minkd="mink delete "
+

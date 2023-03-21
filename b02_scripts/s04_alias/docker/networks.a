@@ -1,0 +1,48 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.6" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T docker networks
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+# N E T W O R K S
+
+#  docker network  --> Redes en docker
+alias dn="d network "
+
+#  docker network list --> Redes en docker
+alias dnl="dn list "
+
+# docker network create - mejor con una funcion
+# Ejemplo actual dnc web01 --driver host
+# Ejemplo ideal dnc web01 host ( por defecto bridge )
+
+alias dnc="dn_network_create"
+
+# Fast inspect Networks
+alias dni="dn_network_fast_inspect"
+
+# Docker delete Networks
+alias dnd="dn delete "

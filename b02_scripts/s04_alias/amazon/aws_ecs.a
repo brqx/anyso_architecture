@@ -1,0 +1,43 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- awe 
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws ECR
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+# awc  --> ECS
+# awcf --> CF (Cloud Formation)
+
+#Amazon ECS - awc
+alias awc="aws ecs "
+
+#Aws ECS List Clusters
+alias awcl="aws_ecs_list_clusters"
+
+#Aws ECS List Task
+alias awct="aws_ecs_list_tasks"
+
+#Aws ECS Describe Tast - Get Fargate IP
+alias awcd="aws_ecs_describe_task_get_ip"
+

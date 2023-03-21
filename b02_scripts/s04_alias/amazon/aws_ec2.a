@@ -1,0 +1,95 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- aw2
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#Amazon EC2
+
+alias aw2="aws ec2 "
+
+# Funcionalidad Connect Instance [SSH to INSTANCE] ( 18-11-2021) 
+alias aw2s="aws_connect_ec2"
+
+# Conexion agent SSH
+alias aw2sa="aws_connect_agent_ec2"
+
+
+alias awsgi="aw2 describe-security-groups --query 'SecurityGroups[*].GroupId' --output text | tr '\t' '\n'"
+alias awsgn="aw2 describe-security-groups --query 'SecurityGroups[*].[GroupId, GroupName ,Vpc]' --output table | tr '\t' '\n'"
+
+#- Pendiente de crear funcion - Version alfa 
+alias aw2c="aws_create_ec2"
+
+#- Pendiente de crear funcion - Version alfa
+
+# Alias Terminate
+alias aws_terminate_ec2="aws_delete_ec2"
+
+alias aw2t="aws_terminate_ec2"
+alias aw2d="aws_delete_ec2"
+
+#- Pendiente de crear funcion - describe - info
+alias aw2i="aws_info_ec2"
+
+#- Pendiente de crear funcion
+alias aw2d="aws_delete_ec2"
+
+#- Pendiente de crear funcion
+alias aw2l="aws_list_ec2"
+
+alias aw2r="aws ec2 run-instances "
+
+alias aw2sta="aws_start_ec2"
+
+alias aw2sto="aws_stop_ec2"
+
+# Habilitamos salida tabulada - ec2 instance list
+alias aw2bund="aws_list_bundles_ec2_tab "
+
+# Habilitamos salida no tabulada - ec2 instance list
+alias aw2bunn="aws_list_bundles_ec2 "
+
+# Habilitamos salida tabulada - ec2 instance list
+alias aw2p="aws_list_prices_ec2 "
+
+# Habilitamos salida tabulada - ec2 images|ami list
+alias aw2a="aws_list_amis_ec2_tab "
+alias aw2amis="aws_list_amis_ec2"
+
+alias aw2aslow="aws_list_amis_slow_ec2 "
+
+#Show Ami/Image full information
+alias aw2i="aws_show_ami_ec2 "
+
+# Elastic ips
+alias aw2lips="aws_list_eips "
+
+
+#Replace new lines : \$:HR[-]\n\$:P[
+#L52G3aaUVd71
+#Emulators : http://scottrice.github.io/Ice/emulators/
+#gKDXDDy3731
+#SIMPLE_LINE="http://tv.kkzbigserver.iptv.uno/get.php?username=tidbrqx&password=FzJ7u976"

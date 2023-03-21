@@ -1,0 +1,67 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- awv - awv8
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#-- aws-vault
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Amazon Aws
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#Amazon Function and Alias Information
+
+alias awz="amazon_alias_info"
+
+# Alias Common - 60
+# Funciones comunes aun sin clasificar
+alias awzcommon="aws_alias_info_common"
+
+# Alias VPC - 61
+alias awzv="aws_alias_info_vpc"
+
+# Alias EC2 - 62
+alias awz2="aws_alias_info_ec2"
+
+# Alias S3  - 63
+alias awz3="aws_alias_info_s3"
+
+# Alias EFS - 64
+alias awzf="aws_alias_info_efs"
+
+# Alias ECR - 65
+alias awze="aws_alias_info_ecr"
+
+# Alias ECS - 66
+alias awzc="aws_alias_info_ecs"
+
+# Alias DynamoDb - 71
+alias awzdy="aws_alias_info_dynamodb"
+
+# Alias AWS VAULT  - 68
+alias awzva="aws_alias_info_vault"
+alias awvaz="awzva" 
+
+# Alias Light Sail - 69
+alias awzl="aws_alias_info_lightsail"
+
+# Alias Cloud Formation - 70
+alias awzcf="aws_alias_info_cf"
+alias awfz="awzcf"

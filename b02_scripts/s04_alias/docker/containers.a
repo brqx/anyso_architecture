@@ -1,0 +1,77 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.6" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T docker - containers
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# C O N T A I N E R S - I N S T A N C E S
+
+# docker create --> create container
+alias dcr="d create "
+
+# docker create - map ports
+alias dcrp="dcr -p "
+
+# docker create - efimeral ports
+# Example : dcrP  --name web01 helloworl
+# Fichero puertos locales linux : cat /proc/sys/net/ipv4/ip_local_port_range
+# 32768   60999
+
+alias dcrP="dcr -P "
+
+#  docker start
+alias dst="d start "
+
+#  docker stop (apagado ordenado - kill -15)
+alias dsp="d stop "
+
+# docker run 
+# Example : dr -d -P --name web02 helloworld
+
+#  docker run --> cargar por primera vez ( salir Ctr P + Ctr Q )
+alias dr="d run "
+
+#-------------------------------------------------------------------------
+
+
+# docker run removing previous image
+alias drrm="d run  --rm "
+
+alias drd="d run -d "
+
+# docker run interactive removing previous image
+# por defecto eliminamos la imagenes y contenedores intermedias/os
+alias drit="drrm -it "
+
+# docker run interactive removing previous image in background
+alias dritd="drrm -it -d "
+
+alias drid="dritd "
+
+# Super funcion que borra todos los contenedores y imagenes no usadas que han quedado
+alias drmall="drm_containers_and_images_none"
+
+alias drma="drmall"
+
+

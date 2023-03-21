@@ -1,0 +1,183 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2020-06-01
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- k - kcr - kdl
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Kubernetes
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+minikube_aliases()
+{
+minikube status &> /dev/null
+MINK_STATUS=$?
+if [ "${MINK_STATUS}" == "0" ] ; then
+
+alias krundock="eval $(minikube docker-env)"
+
+# Alias para saber como cambiar en entorno de docker para que aunte a minikube
+alias kdock="echo 'eval $(minikube docker-env)'"
+
+
+fi
+
+
+}
+
+
+#---------------- K alias ------------------
+
+alias k="kubectl "
+
+#---------------- N F O ------------------
+
+# kubernetes create - get - delete
+alias kg="k get "
+
+alias klogs="k logs "
+
+# kubernetes run
+alias kr="k run "
+
+# Ejecutar un pod directamente : 
+
+# krit
+alias krit="kr --rm -it "
+
+# Carga un pod de una imagen indicada
+alias krgen="k8_runpod_sh"
+
+# Cargar el entorno de kubernetes desde docker
+# Esto solo si esta minikube
+
+minikube_aliases
+
+# kubernetes edit
+
+alias ke="k edit "
+
+# kubernetes create - get - delete
+alias kcr="k create "
+
+
+# Kubernets describe
+alias kds="k describe "
+alias kdes="kds "
+
+alias kex="k expose "
+
+alias kci="k cluster-info "
+
+#------------------- E X E C -------------------
+
+# Kubectl exec
+alias kxx="k exec "
+alias kit="kxx -it "
+
+# k exec -it podtest -- sh
+# Para bash necesitamos una funcion
+alias kbash="k8_exec_bash"
+
+alias ksh="k8_exec_sh"
+
+# Para yaml necesitamos otra funcion
+
+alias kyaml="k8_desc_yaml"
+
+
+alias ksc="k scale "
+
+alias kap="k apply "
+
+alias kdl="k delete "
+alias kdel="kdl "
+
+# Aplicar un manifesta  nuestra configuracion del cluster
+alias ka="kap -f  "
+
+# Multiple apply
+
+alias kaf="k8_applyf_yaml"
+
+# Aplicar un manifesta  nuestra configuracion del cluster
+alias kd="kdl -f  "
+
+# Multiple delete
+alias kdf="k8_delf_yaml"
+
+#---------------- G E T ------------------
+
+# Kubernetes - Get nodes y get all
+alias kgn="kg nodes "
+alias kga="kg all"
+
+# Vemos los pods de todos los namespaces
+alias kgaa="kga --all-namespaces"
+
+#Formato wide
+alias kgnw="kgn -o wide "
+alias kgaw="kga -o wide "
+
+alias kgp="kg pods "
+alias kgs="kg services "
+alias kgd="kg deployments "
+alias kgr="kg replicasets "
+
+alias kgpw="kg pods -o wide "
+alias kgsw="kg services -o wide "
+alias kgdw="kg deployments -o wide "
+alias kgrw="kg replicasets -o wide "
+
+
+#---------------- D E L ------------------
+
+alias kdl_sv="kdl services "
+alias kdl_dp="kdl deployment "
+
+alias kdlp="kdl pod "
+
+
+
+#---------------- D E S C R I B E ------------------
+
+#Describe service
+alias kdss="kdes svc "
+alias kdp="kdsp "
+
+alias kds="kdss "
+
+#--------------- R O L L   O U T ---------------
+
+alias kroll="k rollout"
+
+# Cambios en el deployment
+alias krollh="kr history deployment "
+
+# Estado de un deployment
+alias krolls="kr status deployment "
+
+# Rolback de un deployment
+alias krollu="kr undo deployment "
+
+# Port Forward
+# Example : k port-forward $PNAME 7000:9090 &
+alias kpp="k port-forward "

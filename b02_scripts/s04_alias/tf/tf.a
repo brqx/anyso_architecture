@@ -1,0 +1,102 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.3" #  Version del Script actual - 2022-10-21
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- tf - ti - tp - ta - ts - td - tv - tw - tt
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Kubernetes
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T terraform
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- K alias ------------------
+
+alias tf="terraform "
+
+#---------------- I N I T  ------------------
+
+alias ti="tf init "
+# Tenemos dos tipos de init
+# -reconfigure    - Los dos parten de la estructura actual del plan
+# -migrate-state
+# Ninguno es capaz de refrestar el estado actual desde un bucket S3
+
+# Una vez hemos puesto otro provider hay que hacer upgrade
+
+alias tiu="tf init -upgrade "
+
+
+#--------------- R E F R E S H ------------------
+# Ojo - tr ya es un comando - Es lo que debemos ver antes de crear un alias
+alias tfr="tf refresh"
+
+#---------------- P L A N  ------------------
+
+alias tp="tf plan"
+
+#---------------- A P P L Y  ------------------
+
+alias ta="tf apply --auto-approve"
+alias tta="time ta"
+
+#---------------- S H O W    ------------------
+
+alias ts="tf show"
+
+#---------------- G R E P  --------------------
+alias tg="ts -no-color | grep "
+
+#--------------- D E S T R O Y ---------------
+
+alias td="tf destroy --auto-approve"
+alias ttd="time td"
+
+#------------- V A L I D A T E  ------------------
+
+alias tv="tf validate"
+
+
+#------------- W O R K S P A C E  ---------------
+
+alias tw="tf workspace"
+
+#------------- S T A T E  ---------------
+
+alias tt="tf state"
+
+#------------- M A K E    F O R M A T   |   L I N T   ---------------
+
+alias tff="tf fmt"
+
+#------------- I N F O R M A T I O N   ---------------
+
+alias tf_a="terraform_alias_info"
+
+alias tz="tf_a"
+
+alias tzz="tf_alias_info_command"
+
+alias tzc="tf_alias_info_composer"
+
+alias tzzz="tf_alias_info_command_large"
+
+alias tzcz="tf_alias_info_composer_large"
+
+

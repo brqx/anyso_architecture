@@ -1,0 +1,35 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# Farmacia Zaragoza - Brqx Architectures - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Noviembre 2021"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="ageneral"
+CONCEPT_SUBDIV_04="delete"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+
+
+# Funcionalidad Sync Delete Filter Folder
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}general_delete_filter_folder.f
+#-------------------------------------------------------------------
+
+# Borrado de carpetas filtro con y sin espacios
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}general_delete_filter_folder_spaces.f
+#-------------------------------------------------------------------

@@ -1,0 +1,64 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.5" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+#+ Alias 
+#-------------------------------------------------------------------
+#-- lgd - lrc 
+#-- ns - nsa 
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion : 
+#-------------------------------------------------------------------
+#I Alias generales para reiniciar sites - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros : 
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+
+#-Full Products Generation
+
+#---------------- A R Q ------------------
+
+# garldru - link garland drupal
+
+alias lgd="lnf /brqx/cache/arq/drupal/garldru cache ; lnf /brqx/base/html/designs/garldru/v01 flow ; lnf /brqx/base/html/designs/garldru/img r_img ; lnf /sata/Fotos/zselection photos ; cha"
+
+
+#---------------- P E R ------------------
+
+# garlrct - link garland rct
+alias lgr="lnf /brqx/cache/per/rct/garlrct cache ; lnf /brqx/base/html/designs/garlrct/v01 flow ; lnf /brqx/base/html/designs/rct/img r_img ; lnf /sata/Fotos/zselection photos ; cha"
+
+
+#---------------- P Y C ------------------
+
+# garlsoc - link garland social
+alias lgs="lnf /brqx/cache/pyc/social/arqsoc cache ; lnf /brqx/base/html/designs/garlsoc/v01 flow ; lnf /brqx/base/html/designs/social/img r_img ; lnf /sata/Fotos/zselection photos ; cha"
+
+# garlmet - link garland meto
+
+alias lgm="lnf /brqx/cache/pyc/meto/garlmet cache ; lnf /brqx/base/html/designs/garlmet/v01 flow ; lnf /brqx/base/html/designs/meto/img r_img ; lnf /sata/Fotos/zselection photos ; cha"
+
+
+#---------------- M E T ------------------
+
+# light - link garland light
+alias lgl="lnf /brqx/cache/met/light/light cache ; lnf /brqx/base/html/designs/light/v01 flow ; lnf /brqx/base/html/designs/light/img r_img ; lnf /sata/Fotos/zselection photos ; cha"
+
+
+#-Full Products Start
+
+
+alias ns="nodejs_start_site"
+
+alias nsa="nodejs_start_all_sites"

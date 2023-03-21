@@ -1,0 +1,81 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.2" #  Version del Script actual - 2022-06-26
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- tcf - tfci - tfcp - tfca - tfcs - tfcd - tfcv - tfcw - tfct
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Terraform con Docker Compose
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T terraform
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- TFC alias ------------------
+# Asumimos que todo el codigo de terraform esta en la carpeta deploy
+
+# Terraform Docker
+alias tfd="dc -f deploy/docker-compose.yml run --rm terraform "
+
+# Terraform Docker Compose
+alias tfc="tfd"
+
+
+#---------------- I N I T  ------------------
+
+alias tfci="tfd init"
+
+#---------------- P L A N  ------------------
+
+alias tfcp="tfd plan"
+
+#---------------- A P P L Y  ------------------
+
+alias tfca="tfd apply --auto-approve"
+
+#---------------- S H O W    ------------------
+
+alias tfcs="tfd show"
+
+#--------------- D E S T R O Y ---------------
+
+alias tfcd="tfd destroy --auto-approve"
+
+#------------- V A L I D A T E  ------------------
+
+alias tfcv="tfd validate"
+
+
+#------------- W O R K S P A C E  ---------------
+
+alias tfcw="tfd workspace"
+
+#------------- S T A T E  ---------------
+
+alias tfct="tfd state"
+
+#------------- M A K E    F O R M A T   |   L I N T   ---------------
+
+alias tfcf="tfd fmt"
+
+#------------- I N F O R M A T I O N   ---------------
+
+alias tzc="tfc_alias_info_composer"
+
+alias tzcz="tfc_alias_info_composer_large"
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 2.2"          #  Version del Script actual
+FECHA_SCRIPT="Julio 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="present"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+# Funcionalidad Present - Lines - Multi Lines - Files - Headers and Footers
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_zpresent/lines/a04_present_lines.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_zpresent/mlines/a04_present_multi_lines.l4f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_zpresent/headers/a04_present_headers.l4f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_zpresent/footers/a04_present_footers.l4f
+#-------------------------------------------------------------------
+
+. ${LAA_FUNC}a03_zpresent/easy/a04_present_easy.l4f
+#-------------------------------------------------------------------

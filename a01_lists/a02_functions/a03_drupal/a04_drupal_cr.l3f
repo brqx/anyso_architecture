@@ -1,0 +1,37 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Marzo 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="drupal"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Tercer nivel: Funcionalidad Web Servers
+
+. ${LSCRIPT_PARTICULAR_PATH_04}domain/dru_domain_cache_files.f
+. ${LSCRIPT_PARTICULAR_PATH_04}domain/dru_domain_create.f
+. ${LSCRIPT_PARTICULAR_PATH_04}domain/dru_domain_link_modules.f
+. ${LSCRIPT_PARTICULAR_PATH_04}domain/dru_domain_settings.f
+. ${LSCRIPT_PARTICULAR_PATH_04}domain/dru_link_modules.f
+
+
+. ${LSCRIPT_PARTICULAR_PATH_04}subdomain/dru_subdomain_cache_files.f
+. ${LSCRIPT_PARTICULAR_PATH_04}subdomain/dru_subdomain_create.f
+. ${LSCRIPT_PARTICULAR_PATH_04}subdomain/dru_subdomain_link_modules.f
+. ${LSCRIPT_PARTICULAR_PATH_04}subdomain/dru_subdomain_settings.f
+

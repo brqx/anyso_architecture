@@ -1,0 +1,44 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# Farmacia Zaragoza - Brqx Architectures - Rct - 2021
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Enero 2022"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="ageneral"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Tercer nivel
+
+# Funcionalidad HOOKS
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_ageneral/a04_general_hooks.l3f
+#-------------------------------------------------------------------
+
+
+# Funcionalidad SYNC
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_ageneral/a04_general_sync.l3f
+#-------------------------------------------------------------------
+
+# Funcionalidad DELETE
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_ageneral/a04_general_delete.l3f
+#-------------------------------------------------------------------
+

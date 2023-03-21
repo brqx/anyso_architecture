@@ -1,0 +1,36 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2015
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2015"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="mysql"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Tercer nivel: Funcionalidad SQL
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}bbdd/copy/mycp_copy_db.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}bbdd/copy/mycpr_copy_and_replace_database.f
+#-------------------------------------------------------------------
+
+. ${LSCRIPT_PARTICULAR_PATH_04}bbdd/copy/myrcr_recreate_db.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}bbdd/copy/mycplan_multi_copy_lan.f
+#-------------------------------------------------------------------
+

@@ -1,0 +1,70 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.6" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start/restart node js engine
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-S Y S T E M S  O P E R A T I O N S
+
+# docker stack --> manage docker swarm and k8s
+alias dkl="dk \ls "
+
+
+# docker stack rm ID --> remove stack from swarm
+alias dkrm="dk rm "
+
+
+# docker cp ( Copia )
+alias dcp="d cp "
+
+
+#  docker attach --> Entrada en contenedores
+alias da="d attach "
+
+#  docker remove instances (To force drm -f)
+alias drm="d rm "
+
+alias drf="d rm -f "
+
+#  docker exec --> Ejecutar comandos en un contenedor que esta corriendo
+# Ejemplo : dox web02 uptime
+
+alias dox="d exec "
+
+# Docker interactivo
+alias doxi="dox -i "
+
+
+# Ejecuccion interactiva de bash - No podemos usar un alias directamente
+alias dbash="de_exec_bash"
+# Ejemplo : dbash web02
+# d exec  -it  CONTENEDOR bash"
+
+alias dash="de_exec_ash"
+
+
+# Acceso a los logs del contenedor
+alias dlogs="d logs "
+
+alias dlogf="d logs -f "

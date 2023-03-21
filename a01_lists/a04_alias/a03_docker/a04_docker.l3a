@@ -1,0 +1,52 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org - Farmacia Zaragoza
+# MM - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Enero 2022"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="alias"
+CONCEPT_ARQUETIPO_04="docker"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s04_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Level 00: Funcionalidad Web Servers - Docker
+. ${LSCRIPT_PARTICULAR_PATH_04}commands.a
+
+#-- Level 00: Funcionalidad Containers - Docker
+. ${LSCRIPT_PARTICULAR_PATH_04}containers.a
+
+#-- Level 00: Funcionalidad Images - Snapshots - Docker
+. ${LSCRIPT_PARTICULAR_PATH_04}images.a
+
+#-- Level 00: Funcionalidad Volumenes - Docker
+. ${LSCRIPT_PARTICULAR_PATH_04}volumes.a
+
+#-- Level 00: Funcionalidad Networks - Docker
+. ${LSCRIPT_PARTICULAR_PATH_04}networks.a
+
+#-- Level 00: Funcionalidad Web Servers - Docker Process
+. ${LSCRIPT_PARTICULAR_PATH_04}process.a
+
+#-- Level 00: Funcionalidad Web Servers - Docker Services
+. ${LSCRIPT_PARTICULAR_PATH_04}services.a
+
+#-- Level 00: Funcionalidad Web Servers - Docker Stacks - Swarm
+. ${LSCRIPT_PARTICULAR_PATH_04}stacks.a
+
+#-- Level 00: Funcionalidad Web Servers - Docker System Operations
+. ${LSCRIPT_PARTICULAR_PATH_04}system.a
+
+#-- Level 00: Funcionalidad Web Servers - Docker Composer
+. ${LSCRIPT_PARTICULAR_PATH_04}composer.a

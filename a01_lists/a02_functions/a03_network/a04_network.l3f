@@ -1,0 +1,69 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2015
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2015"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="network"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Networking - Level 01
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/wdom_which_is_my_ip.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/wcur_curl_http_result.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/wpin_ping_telnet_port.f
+#-------------------------------------------------------------------
+
+#-- Networking - Level 02
+
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wdomout_which_is_my_ip_out.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wdomlite_wdom_check_site.f
+#-------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wcurout_curl_http_result_out.f
+#-------------------------------------------------------------------
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wcurlite_curl_http_result_line.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wcurliteout_curl_http_result_line.f
+#-------------------------------------------------------------------
+
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/wpinout_ping_telnet_port_out.f
+#-------------------------------------------------------------------
+
+
+#-- Networking - Level 03
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/wfulldom_full_conectivity.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/wfulldomout_full_conectivity.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/wfulldomlite_full_conectivity.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/wfulldomliteout_full_conectivity.f
+#-------------------------------------------------------------------

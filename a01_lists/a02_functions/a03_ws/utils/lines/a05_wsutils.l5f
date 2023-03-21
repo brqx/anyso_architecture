@@ -1,0 +1,47 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2016
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="July 2016"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+#-- Lines - WS GetPathLine
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/ws_getpathline.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/ws_getsitefromdb.f
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/ws_getsiteline.f
+#-------------------------------------------------------------------
+
+
+#-- Lines - WS Utils
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/ws_infoline_lib.f
+#-------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/wsnf_lib.f
+#-------------------------------------------------------------------
+
+#- Subdomain functions
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}utils/lines/wsutils/wsnfs.f
+#-------------------------------------------------------------------
+

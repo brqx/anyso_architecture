@@ -1,0 +1,55 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2017
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.5" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+#+ Alias 
+#-------------------------------------------------------------------
+#-- fus - fur - fup - ful
+#-- has - har - hap - hal
+#-- wes - wer - wep - wel
+#-- pes - per - pep
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion : 
+#-------------------------------------------------------------------
+#I Alias generales para reiniciar productos - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T start services engines haproxy reverse alias full
+#-------------------------------------------------------------------
+#+ Parametros : 
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+#-Full Products
+alias fur="full_restart_products"
+alias fus="full_start_products"
+alias fup="full_stop_products"
+alias ful="full_reload_products"
+
+
+#-Ha Proxy
+alias har="ha_restart_proxy"
+alias has="ha_start_proxy"
+alias hap="ha_stop_proxy"
+alias hal="ha_reload_proxy"
+
+
+#-WS WebServers
+alias wer="ws_restart_services"
+alias wes="ws_start_services"
+alias wep="ws_stop_services"
+alias wel="ws_reload_services"
+
+
+#-NG Engines Php
+alias per="ng_restart_engines"
+alias pes="ng_start_engines"
+alias pep="ng_stop_engines"
+
+#No se si podemos hacer reload

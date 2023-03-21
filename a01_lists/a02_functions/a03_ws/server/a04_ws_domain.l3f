@@ -1,0 +1,56 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2017
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.2"          #  Version del Script actual
+FECHA_SCRIPT="Octubre 2017"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="functions"
+CONCEPT_ARQUETIPO_04="httpd"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO 
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Level 00: Funcionalidad Web Servers - Domain
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/domain/wscd_create_domain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/domain/wsdd_drop_domain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/domain/wccd_create_cluster_domain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_00/domain/wcdd_drop_cluster_domain.f
+
+#-- Level 01: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/domain/wscdl_create_domain_lang.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/domain/wscdn_create_domain_nocluster.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/domain/wsddn_drop_domain_nocluster.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_01/domain/wsddl_drop_domain_lang.f
+
+
+#-- Level 02: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/domain/ws_create_domain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_02/domain/ws_drop_domain.f
+
+#-- Level 03: Funcionalidad Web Servers - Domain
+
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/domain/webserver_create_domain.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_03/domain/webserver_drop_domain.f
+
+
+#-- Level 04: Funcionalidad Web Servers - Domain
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/apache_crvs.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/gwan_crvs.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/gwan_drvs.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/lighttp_crvs.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/nginx_crdom.f
+. ${LSCRIPT_PARTICULAR_PATH_04}level_04/domain/nginx_crdom_ssl.f
+

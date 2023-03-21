@@ -1,0 +1,86 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.6" #  Version del Script actual
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- lgd - lrc
+#-- ns - nsa
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar docker - Clearing Management Architecture
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T docker images
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+# I M A G E S
+
+#  docker images  -->Images descargadas con filtro
+alias di="di_filter"
+
+# Docker pull image
+alias dpull="d pull "
+
+#  docker Tags --> Taggeo de imagenes (dtag dtal)
+alias dtag="dt_tag"
+
+#  docker Tags --> Taggeo de imagenes
+alias dtal="dt_tag_latest"
+alias dtl="dtal"
+
+# D O C K E R   B U I L D
+
+
+alias db_norm="d build "
+
+#  docker build images  -->Elimina imagenes intermedias correctas e incorrectas
+# es la opcion mas correcta
+alias db_rm="d build  --rm "
+
+alias dbrm="db_rm "
+
+# Alias agil para compilar imagenes docker
+alias db="dbrm -t "
+
+
+#  docker build images  -->Elimina imagenes intermedias correctas e incorrectas
+alias dbnc="db --no-cache "
+
+
+#  docker build images con un tag
+alias dbt="db_tag"
+
+#  docker build images con un tag sin cache
+alias dbtnc="db_tag_no_cache"
+
+# D O C K E R   R E M O V E 
+
+#  docker remove instances
+alias drm="d rm "
+
+alias drmf="d rm -f "
+
+#  docker remove images
+alias dirm="d image rm "
+alias drmi="dirm "
+
+
+# Docker remove None Images
+# No funciona como alias - vamos a tener que hacer una funcion para esto
+#alias drni="drmi $(di | grep '<none' | tr -s ' '| cut -d ' ' -f3 | tr '\n' ' ')"
+alias drni="drm_images_none"
+

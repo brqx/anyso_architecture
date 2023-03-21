@@ -1,0 +1,57 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Brqx Org
+# MM - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="V 1.3"          #  Version del Script actual
+FECHA_SCRIPT="Agosto 2022"
+#-------------------------------------------------------------------
+LEVEL_NIVEL=04		# Variable control profundidad alcanzada
+LEVEL_NIVEL_04=04	# Variable control script
+CONCEPT_FORMATO_04="script"
+CONCEPT_MOLDE_04="alias"
+CONCEPT_ARQUETIPO_04="amazon"
+#-------------------------------------------------------------------
+CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
+CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
+#-==================================================================
+#+ Funciones Comunes de ACCESO
+#-==================================================================
+
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s04_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+
+
+#-- Level 00: Funcionalidad Aws Common
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_common.a
+
+
+#-- Level 00: Funcionalidad Aws Lightsail
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_lightsail.a
+
+#-- Level 00: Funcionalidad Aws S3
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_s3.a
+
+#-- Level 00: Funcionalidad Aws VPC
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_vpc.a
+
+#-- Level 00: Funcionalidad Aws Ec2
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_ec2.a
+
+#-- Level 00: Funcionalidad Aws Ecr
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_ecr.a
+
+#-- Level 00: Funcionalidad Aws Ecs
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_ecs.a
+
+#-- Level 00: Funcionalidad Aws DynamoDb
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_dynamodb.a
+
+#-- Level 00: Funcionalidad Aws Cloud Formation
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_cf.a
+
+#-- Level 00: Funcionalidad Aws Vault
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_vault.a
+
+
+#-- Level 00: Funcionalidad Aws Info
+. ${LSCRIPT_PARTICULAR_PATH_04}aws_info.a
