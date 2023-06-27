@@ -1,0 +1,80 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.2" #  Version del Script actual - 2022-06-26
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- gia
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Git
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T azure
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- GIA alias ------------------
+# Insertamos en Git la carpeta actual - Modo comun de proceder
+
+alias gia="azure add ."
+
+#------------- C O M M I T  ------------------
+# azure commit -am "${INFO}"
+
+alias gic="azure_commit"
+
+# Commit with message
+alias gicm="gic -am"
+
+alias gicam="gic 'Changes automatically approved"
+
+#------------- P U S H    O R I G I N  ------------------
+# Habilitamos la resolucion de indicar la rama actual
+
+alias gip="azure_push_origin"
+
+#------------- P U L L    O R I G I N  ------------------
+# Recuperamos/actualizamos la rama actual
+
+alias gio="azure pull origin"
+
+#------------- C H E C K O U T   ------------------
+# Creaccion/Cambio de rama - Ajustando el path
+# Tenemos alias y funcion
+# gik feature/network --> azure checkout -b fe....
+
+alias gika="azure checkout"
+
+alias gikf="azure_checkout"
+
+alias gik="gikf"
+
+#------------- M E R G E  ------------------
+# Podemos hacer un merge desde linea de comandos: 
+# 1- Cambio de rama que queremos mezclar ( gika master )
+# 2- Habilitamos los cambios (gio) 
+# 3- Cambio de rama (gika production)
+# 3- Merge (gim master)
+
+alias gim="azure merge"
+
+
+#----------- I N F O R M A T I O N  ------------------
+# Informacion de los alias definidos ( 2022 Jul )
+
+alias azure_a="azure_alias_info"
+
+alias giz="azure_a"

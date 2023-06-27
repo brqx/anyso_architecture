@@ -6,7 +6,7 @@
 # Informa de los alias definidos en arquitectura
 # ------------------------------------------------------
 
-git_alias_info()
+azure_alias_info()
 {
 VER="0.0.0.1"
 FEC="2022-Jul"
@@ -16,7 +16,7 @@ if [ "${1}" == "-?" ] ; then
 echo "==--==--==--==--==--==--==--==--==--==--==--==--==--==--=="
 echo "Informacion de los alias definidos en Git en arquitectura Brqx [$VER] [$FEC] "
 echo "=========================================================="
-echo "Format  : gic | git_commit INFO               "
+echo "Format  : gic | azure_commit INFO               "
 echo "==--==--==--==--==--==--==--==--==--==--==--==--==--==--=="
 
 else
@@ -36,13 +36,10 @@ echo "$(format_text_length ${TEXT})  - ${yellow}Actualizamos Git con el contenid
 TEXT="$(alias gic)"
 echo "$(format_text_length ${TEXT})  - ${yellow}Hacemos un commit en Git"$(textreset)
 
-TEXT="$(alias gicm)"
-echo "$(format_text_length ${TEXT})  - ${yellow}Hacemos un commit en Git con mensaje"$(textreset)
+# Commit with message
+alias gicm="gic -am"
 
-# Commit with message - Igual requiere funcion
-# alias gicm="gic -am"
-
-# alias gicam="gic -am 'Changes automatically approved"
+alias gicam="gic -am 'Changes automatically approved"
 
 
 TEXT="$(alias gim)"

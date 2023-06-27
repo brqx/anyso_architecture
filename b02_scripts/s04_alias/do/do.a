@@ -1,0 +1,52 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2023
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2022-06-26
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- do
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Digital Ocean
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T git
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- Digtal Ocean alias ------------------
+# Digital Ocean - Alias General
+
+alias do="doctl "
+
+# Kubernetes ( d - doker | do - digital_ocean )
+
+alias dok="do kubernetes"
+
+# Listado de clusters de kubernetes
+
+alias dokl="do kubernetes cluster list"
+
+# Debe ser una funcion - para salvar guardar el contexto del cluster
+# doctl kubernetes cluster kubeconfig save do-brqx-cluster
+
+alias doksave="dok_save_kubeconfig"
+
+
+#----------- I N F O R M A T I O N  ------------------
+# Informacion de los alias definidos ( 2023 Jul )
+
+alias do_a="do_alias_info"
+

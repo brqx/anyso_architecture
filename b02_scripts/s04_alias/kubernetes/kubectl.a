@@ -1,9 +1,9 @@
 #!/bin/bash
 #-------------------------------------------------------------------
 # Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
-# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2020
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2023
 #-------------------------------------------------------------------
-VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2020-06-01
+VERSION_SCRIPT="0.0.0.2" #  Version del Script actual - 2023-06-27
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #+ Alias
 #-------------------------------------------------------------------
@@ -46,7 +46,19 @@ fi
 
 #---------------- K alias ------------------
 
-alias k="kubectl "
+# Cambio por kubecolor
+# alias k="kubectl "
+#alias k="kubecolor "
+
+# Kubecolor para entornos claros
+alias k="kubecolor --light-background"
+
+
+#Mostrar la version de kubectl
+alias kv="k version --client=true"
+
+#Mostrar la version de kubectl del cluster (server)
+alias ksv="k version --short"
 
 #---------------- N F O ------------------
 
@@ -147,6 +159,11 @@ alias kgsw="kg services -o wide "
 alias kgdw="kg deployments -o wide "
 alias kgrw="kg replicasets -o wide "
 
+# Namespaces
+
+alias kgns="k get ns "
+
+
 
 #---------------- D E L ------------------
 
@@ -181,3 +198,6 @@ alias krollu="kr undo deployment "
 # Port Forward
 # Example : k port-forward $PNAME 7000:9090 &
 alias kpp="k port-forward "
+
+
+#--------------- C O P Y  -  C P ---------------

@@ -5,7 +5,7 @@
 # MM - Rct - 2022
 #-------------------------------------------------------------------
 VERSION_SCRIPT="V 7.2"          #  Version del Script actual
-FECHA_SCRIPT="Mayo 2020"
+FECHA_SCRIPT="Junio 2023"
 #-------------------------------------------------------------------
 LEVEL_NIVEL=02		# Variable control profundidad alcanzada
 LEVEL_NIVEL_02=02	# Variable control script
@@ -66,6 +66,10 @@ CONCEPT_LEVEL_02="${CONCEPT_LEVEL_02} ${CONCEPT_PRODUCTO_02} "
 . ${LAA_FUNC}a03_acore/a03_fun_amazon.l2f
 #-------------------------------------------------------------------
 . ${LAA_FUNC}a03_acore/a03_fun_git.l2f
+#-------------------------------------------------------------------
+#. ${LAA_FUNC}a03_acore/a03_fun_azure.l2f
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_acore/a03_fun_do.l2f
 #-------------------------------------------------------------------
 
 #-------------------------------------------------------------------
