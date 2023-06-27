@@ -1,0 +1,40 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2022
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.2" #  Version del Script actual - 2022-06-26
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- generales
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar MacOS
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T li
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- LI alias ------------------
+# Alias para converter una ruta para MACOS ( comenzando por library)
+
+# No vale como alias pues cada vez sera una ruta que se lee cuando se carga la arquitectura
+#alias li="cd /Library/${PWD}"
+
+alias li="go_macos_library_path"
+
+#----------- I N F O R M A T I O N  ------------------
+# Informacion de los alias generales definidos ( 2022 Jul )
+
+alias general_a="general_alias_info"

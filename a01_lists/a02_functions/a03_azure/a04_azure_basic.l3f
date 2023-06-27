@@ -3,14 +3,15 @@
 # Funciones Entornos Unix - Brqx Site - Brqx Org
 # Farmacia Zaragoza - Brqx Architectures - Rct - 2021
 #-------------------------------------------------------------------
-VERSION_SCRIPT="V 1.2"          #  Version del Script actual
-FECHA_SCRIPT="Enero 2022"
+VERSION_SCRIPT="V 1.1"          #  Version del Script actual
+FECHA_SCRIPT="Noviembre 2021"
 #-------------------------------------------------------------------
 LEVEL_NIVEL=04		# Variable control profundidad alcanzada
 LEVEL_NIVEL_04=04	# Variable control script
 CONCEPT_FORMATO_04="script"
 CONCEPT_MOLDE_04="functions"
-CONCEPT_ARQUETIPO_04="ageneral"
+CONCEPT_ARQUETIPO_04="azure"
+CONCEPT_SUBDIV_04="basic"
 #-------------------------------------------------------------------
 CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
 CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
@@ -18,38 +19,29 @@ CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
 #+ Funciones Comunes de ACCESO 
 #-==================================================================
 
-LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
 
 
-#-- Tercer nivel
-
-# Funcionalidad HOOKS
+# Funcionalidad Commit ( 18-07-2022)
 
 #-------------------------------------------------------------------
-. ${LAA_FUNC}a03_ageneral/a04_general_hooks.l3f
+. ${LSCRIPT_PARTICULAR_PATH_04}g01_azure_commit.f
 #-------------------------------------------------------------------
 
-
-# Funcionalidad SYNC
-
-#-------------------------------------------------------------------
-. ${LAA_FUNC}a03_ageneral/a04_general_sync.l3f
-#-------------------------------------------------------------------
-
-# Funcionalidad DELETE
+# Funcionalidad Push Origin ( 18-07-2022)
 
 #-------------------------------------------------------------------
-. ${LAA_FUNC}a03_ageneral/a04_general_delete.l3f
+. ${LSCRIPT_PARTICULAR_PATH_04}g02_azure_push_origin.f
 #-------------------------------------------------------------------
 
-# Funcionalidad PATHS
+# Funcionalidad Auto Push Origin ( 18-07-2022)
 
 #-------------------------------------------------------------------
-. ${LAA_FUNC}a03_ageneral/a04_general_paths.l3f
+. ${LSCRIPT_PARTICULAR_PATH_04}g03_azure_auto_push_origin.f
 #-------------------------------------------------------------------
 
-# Funcionalidad INFO
+# Funcionalidad Checkout ( 18-07-2022)
 
 #-------------------------------------------------------------------
-. ${LAA_FUNC}a03_ageneral/a04_general_info.l3f
+. ${LSCRIPT_PARTICULAR_PATH_04}g04_azure_checkout.f
 #-------------------------------------------------------------------
