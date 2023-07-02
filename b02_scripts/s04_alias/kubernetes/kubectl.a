@@ -54,10 +54,10 @@ fi
 alias k="kubecolor --light-background"
 
 
-#Mostrar la version de kubectl
+# Mostrar la version de kubectl
 alias kv="k version --client=true"
 
-#Mostrar la version de kubectl del cluster (server)
+# Mostrar la version de kubectl del cluster (server)
 alias ksv="k version --short"
 
 #---------------- N F O ------------------
@@ -92,8 +92,7 @@ alias kcr="k create "
 
 
 # Kubernets describe
-alias kds="k describe "
-alias kdes="kds "
+alias kdes="k describe  "
 
 alias kex="k expose "
 
@@ -105,6 +104,7 @@ alias kci="k cluster-info "
 alias kxx="k exec "
 alias kit="kxx -it "
 
+# Use kubectl exec [POD] -- [COMMAND] instead.
 # k exec -it podtest -- sh
 # Para bash necesitamos una funcion
 alias kbash="k8_exec_bash"
@@ -115,22 +115,25 @@ alias ksh="k8_exec_sh"
 
 alias kyaml="k8_desc_yaml"
 
-
 alias ksc="k scale "
+
+#--------- A P P L Y / D E L E T E ------------------
 
 alias kap="k apply "
 
 alias kdl="k delete "
 alias kdel="kdl "
 
+
 # Aplicar un manifesta  nuestra configuracion del cluster
 alias ka="kap -f  "
 
+alias kae="k8_appy_envsubst"
 # Multiple apply
 
 alias kaf="k8_applyf_yaml"
 
-# Aplicar un manifesta  nuestra configuracion del cluster
+# Aplicar/Eliminar un manifesta  nuestra configuracion del cluster
 alias kd="kdl -f  "
 
 # Multiple delete
@@ -141,6 +144,10 @@ alias kdf="k8_delf_yaml"
 # Kubernetes - Get nodes y get all
 alias kgn="kg nodes "
 alias kga="kg all"
+
+# Kubenetes - Get events
+
+alias kge="kg events "
 
 # Vemos los pods de todos los namespaces
 alias kgaa="kga --all-namespaces"
@@ -153,11 +160,16 @@ alias kgp="kg pods "
 alias kgs="kg services "
 alias kgd="kg deployments "
 alias kgr="kg replicasets "
+alias kgi="kg ingress "
+
 
 alias kgpw="kg pods -o wide "
 alias kgsw="kg services -o wide "
 alias kgdw="kg deployments -o wide "
 alias kgrw="kg replicasets -o wide "
+
+# Obtiene las IPS de los pods
+kgpip="kgpw | tr -s ' ' | cut -d ' ' -f1,6"
 
 # Namespaces
 
@@ -201,3 +213,12 @@ alias kpp="k port-forward "
 
 
 #--------------- C O P Y  -  C P ---------------
+
+
+
+#----------- I N F O R M A T I O N  ------------------
+# Informacion de los alias definidos ( 2023 Jul )
+
+alias k8s_a="k8s_alias_info"
+
+alias k8z="k8s_a"

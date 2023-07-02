@@ -19,7 +19,7 @@ CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
 #+ Funciones Comunes de ACCESO 
 #-==================================================================
 
-LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/basic/${CONCEPT_SUBDIV_04}/
 
 
 # Funcionalidad Kubernetes - Acceso a kubernetes con bash
@@ -39,6 +39,11 @@ LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04
 # Apply multiple files yaml
 #-------------------------------------------------------------------
 . ${LSCRIPT_PARTICULAR_PATH_04}k8_applyf_yaml.f
+#-------------------------------------------------------------------
+
+# Apply multiple files yaml
+#-------------------------------------------------------------------
+. ${LSCRIPT_PARTICULAR_PATH_04}k8_apply_envsubst.f
 #-------------------------------------------------------------------
 
 # Delete multiple files yaml
