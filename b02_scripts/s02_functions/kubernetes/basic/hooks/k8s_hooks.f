@@ -14,11 +14,10 @@
 # Manage Docker aliases
 __k()
 {
-alias k='kubectl '
+# Ajuste de kubectl a kubecolor
+alias k='kubecolor --light-background '
 alias ko='kops '
 alias mink='minikube '
-
-
 }
 
 

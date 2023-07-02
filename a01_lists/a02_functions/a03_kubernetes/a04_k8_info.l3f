@@ -11,7 +11,7 @@ LEVEL_NIVEL_04=04	# Variable control script
 CONCEPT_FORMATO_04="script"
 CONCEPT_MOLDE_04="functions"
 CONCEPT_ARQUETIPO_04="kubernetes"
-CONCEPT_SUBDIV_04="hooks"
+CONCEPT_SUBDIV_04="info"
 #-------------------------------------------------------------------
 CONCEPT_LEVEL_04="${CONCEPT_FORMATO_04} ${CONCEPT_MOLDE_04} ${CONCEPT_ARQUETIPO_04}"
 CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
@@ -19,13 +19,12 @@ CONCEPT_LEVEL_04="${CONCEPT_LEVEL_04} ${CONCEPT_PRODUCTO_04} "
 #+ Funciones Comunes de ACCESO 
 #-==================================================================
 
-LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/basic/${CONCEPT_SUBDIV_04}/
+LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04}/${CONCEPT_SUBDIV_04}/
 
 
-# Funcionalidad Hooks ( 29-11-2021)
+# Funcionalidad Commit ( 18-07-2022)
 
 #-------------------------------------------------------------------
-. ${LSCRIPT_PARTICULAR_PATH_04}k8s_hooks.f
+. ${LSCRIPT_PARTICULAR_PATH_04}k10_k8s_alias_info.f
 #-------------------------------------------------------------------
-
 

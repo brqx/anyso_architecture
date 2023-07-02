@@ -29,18 +29,19 @@ VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2022-06-26
 #---------------- Digtal Ocean alias ------------------
 # Digital Ocean - Alias General
 
-alias do="doctl "
+# No podemos usar este alias puesto que hay muchos do en los bucles de unix
+alias doc="doctl "
 
 # Kubernetes ( d - doker | do - digital_ocean )
 
-alias dok="do kubernetes"
+alias dok="doctl kubernetes"
 
 # Listado de clusters de kubernetes
 
-alias dokl="do kubernetes cluster list"
+alias dokl="doctl kubernetes cluster list"
 
 # Debe ser una funcion - para salvar guardar el contexto del cluster
-# doctl kubernetes cluster kubeconfig save do-brqx-cluster
+# doctl kubernetes cluster kubeconfig save c
 
 alias doksave="dok_save_kubeconfig"
 

@@ -24,27 +24,12 @@ else
 # Establecemos el size del texto deseado para la salida
 set_text_length 30
 
-alias do="doctl "
-
-# Kubernetes ( d - doker | do - digital_ocean )
-
-alias dok="do kubernetes"
-
-# Listado de clusters de kubernetes
-
-alias dokl="do kubernetes cluster list"
-
-# Debe ser una funcion - para salvar guardar el contexto del cluster
-# doctl kubernetes cluster kubeconfig save do-brqx-cluster
-
-alias doksave="dok_save_kubeconfig"
-
 
 echo "--==--==--==--==--==--==--==--==--==--==--"
 echo "Alias definidos en arquitectura Brqx ${VER} - ${FEC}"
 echo "------------------------------------------"
 
-TEXT="$(alias do)"
+TEXT="$(alias doc)"
 echo "$(format_text_length ${TEXT})  - ${yellow}Alias principal de Digital Ocean doctl"$(textreset)
 
 #------------- K U B E R N E T E S  ------------------

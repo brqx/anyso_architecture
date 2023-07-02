@@ -40,3 +40,8 @@ LSCRIPT_PARTICULAR_PATH_04=${S_AA}s02_${CONCEPT_MOLDE_04}/${CONCEPT_ARQUETIPO_04
 . ${LAA_FUNC}a03_kubernetes/a04_k8_kops.l3f
 #-------------------------------------------------------------------
 
+# Funcionalidad Kubernetes - Alias Information
+
+#-------------------------------------------------------------------
+. ${LAA_FUNC}a03_kubernetes/a04_k8_info.l3f
+#-------------------------------------------------------------------
