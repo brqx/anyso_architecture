@@ -37,7 +37,7 @@ alias gia="git add ."
 alias gic="git_commit"
 
 # Commit with message
-alias gicm="gic -am"
+alias gicm="gic "
 
 alias gicam="gic 'Changes automatically approved"
 

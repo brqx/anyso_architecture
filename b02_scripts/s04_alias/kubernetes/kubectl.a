@@ -128,7 +128,7 @@ alias kdel="kdl "
 # Aplicar un manifesta  nuestra configuracion del cluster
 alias ka="kap -f  "
 
-alias kae="k8_appy_envsubst"
+alias kae="k8_apply_envsubst"
 # Multiple apply
 
 alias kaf="k8_applyf_yaml"

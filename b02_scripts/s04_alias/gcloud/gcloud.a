@@ -1,0 +1,97 @@
+#!/bin/bash
+#-------------------------------------------------------------------
+# Funciones Entornos Unix - Brqx Site - Farmacia Zaragoza
+# Brqx Org - Scripting Unix - AGILE ARQ - Rct - 2023
+#-------------------------------------------------------------------
+VERSION_SCRIPT="0.0.0.1" #  Version del Script actual - 2022-06-26
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#+ Alias
+#-------------------------------------------------------------------
+#-- g
+#-------------------------------------------------------------------
+#+ Funciones / Variables Requeridas
+#-------------------------------------------------------------------
+#--
+#-------------------------------------------------------------------
+#+ Informacion :
+#-------------------------------------------------------------------
+#I Alias generales para manejar Google Cloud
+#-------------------------------------------------------------------
+#- Sistema de Meta tags en scripts
+#-------------------------------------------------------------------
+#T Google cloud
+#-------------------------------------------------------------------
+#+ Parametros :
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#-Full Products Generation
+
+#---------------- Google Cloud alias ------------------
+# Google Cloud - Alias General
+
+# No podemos usar este alias puesto que hay muchos do en los bucles de unix
+alias g="gcloud "
+
+# - Kubernetes
+# K8s apply | create
+
+alias g8c="gcloud_k8s_create_cluster"
+alias g8a="g8c"
+
+# K8s destroy | delete
+
+alias g8d="gcloud_k8s_delete_cluster"
+
+# Services
+alias gsvc="g services "
+
+# Config
+alias gcfg="g config "
+
+# Projects
+# Ej : gcloud projects get-iam-policy ${project_id} 
+alias gprj="g projects "
+
+# Ej : gcloud components install gke-gcloud-auth-plugin
+# Ej : gcloud components list
+
+alias gcomp="g components "
+
+# Ej : gcloud container clusters get-credentials gke-cluster --region europe-west3
+
+alias gcont="g container "
+
+# Ej: gcloud info | grep Account
+
+alias ginfo="g info "
+
+# Config - Init - 
+
+alias gi="gcloud init "
+
+# Login Web para Google cloud - ON
+alias glog="gcloud auth application-default login"
+alias gon="glog"
+
+# Enable/disable Services
+# gcloud services enable container.googleapis.com
+
+alias gsvc_on="gsvc enable  "
+
+alias gsvc_off="gsvc disable  "
+
+
+alias gcfg_list="gcfg configurations list"
+
+
+alias gcsave="gcloud_save_kubeconfig"
+
+
+#----------- I N F O R M A T I O N  ------------------
+# Informacion de los alias definidos ( 2023 Jul )
+
+alias gcloud_a="gcloud_alias_info"
+
+alias gci="gcloud_a"
+alias gcz="gcloud_a"
+
